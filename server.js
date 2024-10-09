@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
 app.use(express.json());
 app.set("etag", false);
 app.use('/v1', routes);
-const PORT = process.env.SERVER_PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

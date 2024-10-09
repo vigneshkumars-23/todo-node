@@ -3,6 +3,7 @@ const catchAsync = require("../util/catchAsync")
 
 const UserTodoUpdate = catchAsync(async(req, res) => {
     try{
+        console.log('Update Todo request Received');
         let requestBody = {...req.body};
         //{email, todos: [{id, text, isComplete}]}
         const authorizationHeader = req.headers["authorization"];
@@ -43,6 +44,7 @@ const UserTodoUpdate = catchAsync(async(req, res) => {
 
 const googleSignIn = catchAsync(async(req, res) => {
     try{
+        console.log('Google Sign In request Received');
         const authorizationHeader = req.headers["authorization"];
         const bearerToken = authorizationHeader.substring(7);
         if (authorizationHeader.substring(0, 6) !== "Bearer") {
