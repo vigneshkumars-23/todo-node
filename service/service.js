@@ -36,7 +36,6 @@ const updateUserTodos = async(userInfoFromGoogle, requestBody) => {
 
 const createNewUser = async (userInfo) => {
     try{
-        console.log(userInfoFromGoogle);
         let userCreated = await UserTodos.create(
                 {
                     email: userInfo['email'],
